@@ -1,9 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import Cart from "./components/cart"
+import Store from "./components/store"
 
-ReactDOM.render(
-  <Cart stripeToken="pk_test_yNFG8EE1RMXpBQmCyWRlGDx400CddyVwyS" />,
-  document.getElementById("root")
-)
+ReactDOM.render(<Store />, document.getElementById("root"))
