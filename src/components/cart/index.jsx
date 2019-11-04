@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react"
-
-import products from "../../data/products"
+import React, { useState, useEffect, useContext } from "react"
+import { CartContext } from "./context"
 
 function formatPrice(price) {
   return `$${(price * 0.01).toFixed(2)}`
@@ -12,6 +11,7 @@ function totalPrice(items) {
 
 export default function Cart({ stripeToken }) {
   const [stripe, setStripe] = useState(null)
+  const ctx = useContext(CartContext)
 
   useEffect(() => {
     if (window.Stripe) setStripe(window.Stripe(stripeToken))
@@ -19,7 +19,7 @@ export default function Cart({ stripeToken }) {
 
   function checkout() {
     stripe.redirectToCheckout({
-      products: products.map(item => ({
+      products: ctx.items.map(item => ({
         quantity: item.quantity,
         sku: item.sku
       })),
@@ -41,7 +41,7 @@ export default function Cart({ stripeToken }) {
         </thead>
 
         <tbody>
-          {products.map(item => (
+          {ctx.items.map(item => (
             <tr>
               <td>{item.name}</td>
               <td>
@@ -59,7 +59,7 @@ export default function Cart({ stripeToken }) {
             <td style={{ textAlign: "right" }} colspan={3}>
               Total:
             </td>
-            <td>{formatPrice(totalPrice(products))}</td>
+            <td>{formatPrice(totalPrice(ctx.items))}</td>
           </tr>
 
           <tr>
