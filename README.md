@@ -8,7 +8,14 @@ By using `Context` and `Provider` we can avoid this and keep our code clean. And
 
 This is part 2 of the series and will be continued!
 
-## Chapters
+## Git Branch Chapters
+
+1. [Start Here](https://github.com/ReactUniversity/035-building-an-online-store-part-2-creating-context-using-hooks/tree/01-start-here)
+2. [Products Page](https://github.com/ReactUniversity/035-building-an-online-store-part-2-creating-context-using-hooks/tree/02-products-page)
+3. [Cart Context](https://github.com/ReactUniversity/035-building-an-online-store-part-2-creating-context-using-hooks/tree/03-cart-context)
+4. [Aggregate Cart Items](https://github.com/ReactUniversity/035-building-an-online-store-part-2-creating-context-using-hooks/tree/04-aggregate-cart-items)
+
+## Episodes in this Series
 
 - Part 1 - Stripe Setup and Basic Check-out: [Code](https://github.com/ReactUniversity/033-building-an-online-store-using-react-hooks-stripe) | [Screencast](https://www.youtube.com/watch?v=y0Yq1lPoloo)
 - Part 2 - Product display page and add to Cart: [Code](https://github.com/ReactUniversity/035-building-an-online-store-part-2-creating-context-using-hooks) | [Screencast](https://www.youtube.com/watch?v=PENDING)
